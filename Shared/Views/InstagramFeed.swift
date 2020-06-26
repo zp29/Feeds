@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct InstagramFeed: View {
-    @StateObject var viewModel: IGFeedViewModel
+    @ObservedObject var viewModel: IGFeedViewModel
     
     // FIXME: How do I make this use @AppStorage?
     @State var usernames: [String] = [
