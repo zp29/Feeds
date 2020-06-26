@@ -1,17 +1,12 @@
-//
-//  FeedsApp.swift
-//  Shared
-//
-//  Created by Mark Malstrom on 6/22/20.
-//
-
 import SwiftUI
 
 @main
 struct FeedsApp: App {
+    @StateObject var store = IGFeedViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            InstagramFeed(viewModel: store)
         }
     }
 }
