@@ -1,6 +1,6 @@
 import Foundation
 
-struct Post: Identifiable, Codable {
+struct Post: Identifiable, Codable, DateSortable {
     var id: String { instagramID }
     let instagramID: String
     
@@ -79,13 +79,7 @@ struct Post: Identifiable, Codable {
             captions.append(try text.decode(String.self, forKey: .text))
         }
         
-        caption = captions.first?
-            // Remove hashtags
-            .replacingOccurrences(
-                of: "#(?:\\S+)\\s?",
-                with: "",
-                options: .regularExpression
-            )
+        caption = captions.first
         
         var images = [URL]()
         
@@ -115,19 +109,3 @@ struct Post: Identifiable, Codable {
         self.imageURLs = images.removingDuplicates()
     }
 }
-
-extension Post: Filterable {
-    func contains(keyword: String) -> Bool {
-        guard let caption = caption else {
-            return false
-        }
-        
-        return caption.contains(keyword)
-    }
-    
-    func wasPostedBy(username: String) -> Bool {
-        username == ownerUsername
-    }
-}
-
-extension Post: DateSortable {}

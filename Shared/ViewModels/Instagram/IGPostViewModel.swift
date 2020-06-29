@@ -18,12 +18,34 @@ struct IGPostViewModel: Identifiable, DateSortable {
     }
     
     var images: [URL] { post.imageURLs }
-    var caption: String? { post.caption }
+    var caption: String? {
+        post.caption?
+            // Remove hashtags
+            .replacingOccurrences(
+                of: "#(?:\\S+)\\s?",
+                with: "",
+                options: .regularExpression
+            )
+    }
     
     private let post: Post
     
     init(post: Post, profilePicture: URL) {
         self.post = post
         self.profilePicture = profilePicture
+    }
+}
+
+extension IGPostViewModel: Filterable {
+    func contains(keyword: String) -> Bool {
+        guard let caption = caption else {
+            return false
+        }
+        
+        return caption.contains(keyword)
+    }
+    
+    func wasPostedBy(username: String) -> Bool {
+        self.username == username
     }
 }
