@@ -1,6 +1,6 @@
 import Foundation
 
-struct User: Identifiable, Decodable {
+struct User: Identifiable, Codable {
     var id: String { instagramID }
     let instagramID: String
     
@@ -17,7 +17,7 @@ struct User: Identifiable, Decodable {
     
     let timeline: Timeline
     
-    enum CodingKeys: CodingKey {
+    enum DecodingKeys: CodingKey {
         case username
         case biography
         case full_name
@@ -36,7 +36,7 @@ struct User: Identifiable, Decodable {
     }
     
     init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
+        let values = try decoder.container(keyedBy: DecodingKeys.self)
         biography = try values.decode(String.self, forKey: .biography)
         displayName = try values.decode(String.self, forKey: .full_name)
         username = try values.decode(String.self, forKey: .username)

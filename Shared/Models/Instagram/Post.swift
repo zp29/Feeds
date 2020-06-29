@@ -1,6 +1,6 @@
 import Foundation
 
-struct Post: Identifiable, Decodable {
+struct Post: Identifiable, Codable {
     var id: String { instagramID }
     let instagramID: String
     
@@ -22,7 +22,7 @@ struct Post: Identifiable, Decodable {
         case node
     }
     
-    enum CodingKeys: CodingKey {
+    enum DecodingKeys: CodingKey {
         case id
         case shortcode
         case owner
@@ -56,7 +56,7 @@ struct Post: Identifiable, Decodable {
     
     init(from decoder: Decoder) throws {
         let root = try decoder.container(keyedBy: RootKey.self)
-        let values = try root.nestedContainer(keyedBy: CodingKeys.self, forKey: .node)
+        let values = try root.nestedContainer(keyedBy: DecodingKeys.self, forKey: .node)
         
         instagramID = try values.decode(String.self, forKey: .id)
         shortcode = try values.decode(String.self, forKey: .shortcode)
@@ -105,7 +105,7 @@ struct Post: Identifiable, Decodable {
             guard !images.isEmpty else {
                 throw DecodingError.dataCorrupted(
                     DecodingError.Context(
-                        codingPath: values.codingPath + [CodingKeys.edge_sidecar_to_children],
+                        codingPath: values.codingPath + [DecodingKeys.edge_sidecar_to_children],
                         debugDescription: "edge_sidecar_to_children must contain at least one image display_url"
                     )
                 )

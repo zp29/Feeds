@@ -7,7 +7,7 @@ struct InstagramFeed: View {
     @State var usernames: [String] = [
         "sardinebrunch", "gabbingwithbabish", "baohaus",
         "eataustinlocal", "foodbyromilly",
-        "noshwithtash", "mnnfrr", "testcook"
+        "noshwithtash", "mnnfrr", "testcook", "mygflikeschicken"
     ]
     
 //    @State private var showAddView = false
@@ -22,6 +22,8 @@ struct InstagramFeed: View {
                     
                     LazyVStack {
                         ForEach(viewModel.posts.sorted()) { post in
+                            // FIXME: Navigating to this view causes a crash
+                            // Fatal error: each layout item may only occur once: file SwiftUI, line 0
                             NavigationLink(destination: InstagramContent(viewModel: post)) {
                                 InstagramCard(viewModel: post)
                             }.buttonStyle(PlainButtonStyle())

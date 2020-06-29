@@ -1,11 +1,11 @@
-struct Timeline: Decodable {
+struct Timeline: Codable {
     let postCount: Int
     let hasNextPage: Bool
     let endCursor: String
     
     let posts: [Post]
     
-    enum CodingKeys: CodingKey {
+    enum DecodingKeys: CodingKey {
         case count
         case page_info
         case edges
@@ -17,7 +17,7 @@ struct Timeline: Decodable {
     }
     
     init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
+        let values = try decoder.container(keyedBy: DecodingKeys.self)
         postCount = try values.decode(Int.self, forKey: .count)
         let postArray = try values.decode([Post].self, forKey: .edges)
         posts = postArray.sorted()
