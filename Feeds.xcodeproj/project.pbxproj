@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0F3553824B053CA00D0C7EE /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3553724B053CA00D0C7EE /* RedditAPI.swift */; };
+		D14A2A6C24AF8E6C00580117 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14A2A6B24AF8E6C00580117 /* CardViewModel.swift */; };
+		D155EE5724B05B4D00F99B8B /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155EE5624B05B4D00F99B8B /* Reddit.swift */; };
+		D155EE5824B05B4D00F99B8B /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155EE5624B05B4D00F99B8B /* Reddit.swift */; };
 		D16CF82224A175B500ADECFA /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CF82124A175B500ADECFA /* Tests_iOS.swift */; };
 		D16CF82D24A175B500ADECFA /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CF82C24A175B500ADECFA /* Tests_macOS.swift */; };
 		D16CF82F24A175B500ADECFA /* FeedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CF80624A175B400ADECFA /* FeedsApp.swift */; };
@@ -22,17 +26,12 @@
 		D17CF21724A59E4D003C297E /* DateSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21624A59E4D003C297E /* DateSortable.swift */; };
 		D17CF21924A59E61003C297E /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21824A59E61003C297E /* Filterable.swift */; };
 		D17CF21D24A59EA8003C297E /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21C24A59EA8003C297E /* InstagramAPI.swift */; };
-		D17CF21F24A59EC9003C297E /* IGPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21E24A59EC9003C297E /* IGPostViewModel.swift */; };
-		D17CF22124A59EE8003C297E /* IGFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF22024A59EE8003C297E /* IGFeedViewModel.swift */; };
 		D17CF22324A59F43003C297E /* InstagramFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF22224A59F43003C297E /* InstagramFeed.swift */; };
 		D17CF22424A59FDE003C297E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21424A59E30003C297E /* Post.swift */; };
 		D17CF22524A59FDE003C297E /* DateSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21624A59E4D003C297E /* DateSortable.swift */; };
 		D17CF22624A59FDE003C297E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21024A59E10003C297E /* User.swift */; };
 		D17CF22724A59FDE003C297E /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21824A59E61003C297E /* Filterable.swift */; };
 		D17CF22824A59FDE003C297E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21224A59E20003C297E /* Timeline.swift */; };
-		D17CF22924A59FE2003C297E /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21C24A59EA8003C297E /* InstagramAPI.swift */; };
-		D17CF22A24A59FE2003C297E /* IGPostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21E24A59EC9003C297E /* IGPostViewModel.swift */; };
-		D17CF22B24A59FE2003C297E /* IGFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF22024A59EE8003C297E /* IGFeedViewModel.swift */; };
 		D17CF22C24A59FE4003C297E /* InstagramFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF22224A59F43003C297E /* InstagramFeed.swift */; };
 		D17CF22D24A59FEB003C297E /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20E24A59CA1003C297E /* Color+hex.swift */; };
 		D17CF22E24A59FEB003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20C24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift */; };
@@ -61,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0F3553724B053CA00D0C7EE /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
+		D14A2A6B24AF8E6C00580117 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
+		D155EE5624B05B4D00F99B8B /* Reddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
 		D16CF80624A175B400ADECFA /* FeedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsApp.swift; sourceTree = "<group>"; };
 		D16CF80824A175B500ADECFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D16CF80D24A175B500ADECFA /* Feeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,8 +85,6 @@
 		D17CF21624A59E4D003C297E /* DateSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSortable.swift; sourceTree = "<group>"; };
 		D17CF21824A59E61003C297E /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
 		D17CF21C24A59EA8003C297E /* InstagramAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
-		D17CF21E24A59EC9003C297E /* IGPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGPostViewModel.swift; sourceTree = "<group>"; };
-		D17CF22024A59EE8003C297E /* IGFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGFeedViewModel.swift; sourceTree = "<group>"; };
 		D17CF22224A59F43003C297E /* InstagramFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFeed.swift; sourceTree = "<group>"; };
 		D17CF23024A5A017003C297E /* InstagramCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCard.swift; sourceTree = "<group>"; };
 		D17CF23224A5A054003C297E /* AddNewInstagramFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInstagramFeeds.swift; sourceTree = "<group>"; };
@@ -210,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				D17CF20824A59C28003C297E /* Instagram */,
+				D155EE5624B05B4D00F99B8B /* Reddit.swift */,
 				D17CF21624A59E4D003C297E /* DateSortable.swift */,
 				D17CF21824A59E61003C297E /* Filterable.swift */,
 			);
@@ -239,19 +240,11 @@
 		D17CF21A24A59E71003C297E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				D17CF21B24A59EA1003C297E /* Instagram */,
+				D17CF21C24A59EA8003C297E /* InstagramAPI.swift */,
+				D0F3553724B053CA00D0C7EE /* RedditAPI.swift */,
+				D14A2A6B24AF8E6C00580117 /* CardViewModel.swift */,
 			);
 			path = ViewModels;
-			sourceTree = "<group>";
-		};
-		D17CF21B24A59EA1003C297E /* Instagram */ = {
-			isa = PBXGroup;
-			children = (
-				D17CF21C24A59EA8003C297E /* InstagramAPI.swift */,
-				D17CF21E24A59EC9003C297E /* IGPostViewModel.swift */,
-				D17CF22024A59EE8003C297E /* IGFeedViewModel.swift */,
-			);
-			path = Instagram;
 			sourceTree = "<group>";
 		};
 		D18AA7FE24A5A12B00833812 /* Frameworks */ = {
@@ -430,15 +423,16 @@
 				D17CF21724A59E4D003C297E /* DateSortable.swift in Sources */,
 				D17CF20D24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */,
 				D17CF21324A59E20003C297E /* Timeline.swift in Sources */,
+				D155EE5724B05B4D00F99B8B /* Reddit.swift in Sources */,
 				D17CF21D24A59EA8003C297E /* InstagramAPI.swift in Sources */,
-				D17CF22124A59EE8003C297E /* IGFeedViewModel.swift in Sources */,
+				D14A2A6C24AF8E6C00580117 /* CardViewModel.swift in Sources */,
 				D17CF23324A5A054003C297E /* AddNewInstagramFeeds.swift in Sources */,
 				D17CF20F24A59CA1003C297E /* Color+hex.swift in Sources */,
 				D17CF22324A59F43003C297E /* InstagramFeed.swift in Sources */,
 				D17CF21524A59E30003C297E /* Post.swift in Sources */,
 				D17CF23124A5A017003C297E /* InstagramCard.swift in Sources */,
-				D17CF21F24A59EC9003C297E /* IGPostViewModel.swift in Sources */,
 				D17CF21124A59E10003C297E /* User.swift in Sources */,
+				D0F3553824B053CA00D0C7EE /* RedditAPI.swift in Sources */,
 				D17CF20B24A59C58003C297E /* Array.swift in Sources */,
 				D17CF21924A59E61003C297E /* Filterable.swift in Sources */,
 				D16CF82F24A175B500ADECFA /* FeedsApp.swift in Sources */,
@@ -449,15 +443,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D17CF22B24A59FE2003C297E /* IGFeedViewModel.swift in Sources */,
 				D17CF22424A59FDE003C297E /* Post.swift in Sources */,
 				D17CF22824A59FDE003C297E /* Timeline.swift in Sources */,
 				D17CF22724A59FDE003C297E /* Filterable.swift in Sources */,
-				D17CF22A24A59FE2003C297E /* IGPostViewModel.swift in Sources */,
 				D16CF83024A175B500ADECFA /* FeedsApp.swift in Sources */,
-				D17CF22924A59FE2003C297E /* InstagramAPI.swift in Sources */,
 				D17CF22C24A59FE4003C297E /* InstagramFeed.swift in Sources */,
 				D17CF22F24A59FEB003C297E /* Array.swift in Sources */,
+				D155EE5824B05B4D00F99B8B /* Reddit.swift in Sources */,
 				D17CF22D24A59FEB003C297E /* Color+hex.swift in Sources */,
 				D17CF22624A59FDE003C297E /* User.swift in Sources */,
 				D17CF22E24A59FEB003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */,
