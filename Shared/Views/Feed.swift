@@ -6,7 +6,7 @@ struct Feed: View {
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 0) {
+            LazyVStack(spacing: 0) {
                 ForEach(posts) { post in
                     Content(post: post)
                         .padding()
@@ -22,7 +22,7 @@ struct Content: View {
     
     var body: some View {
         ZStack {
-            VStack(alignment: .leading) {
+            LazyVStack(alignment: .leading) {
                 HStack {
                     KFImage(post.avatar)
                         .resizable()
@@ -40,7 +40,7 @@ struct Content: View {
                 }
                 
                 if post.containsMedia {
-                    VStack(alignment: .center) {
+                    LazyVStack(alignment: .center) {
                         KFImage(post.media.first!.source)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
