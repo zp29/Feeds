@@ -7,10 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0F3553824B053CA00D0C7EE /* RedditAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3553724B053CA00D0C7EE /* RedditAPI.swift */; };
-		D14A2A6C24AF8E6C00580117 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14A2A6B24AF8E6C00580117 /* CardViewModel.swift */; };
-		D155EE5724B05B4D00F99B8B /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155EE5624B05B4D00F99B8B /* Reddit.swift */; };
-		D155EE5824B05B4D00F99B8B /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D155EE5624B05B4D00F99B8B /* Reddit.swift */; };
+		D14A2A6C24AF8E6C00580117 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14A2A6B24AF8E6C00580117 /* Post.swift */; };
 		D16CF82224A175B500ADECFA /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CF82124A175B500ADECFA /* Tests_iOS.swift */; };
 		D16CF82D24A175B500ADECFA /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CF82C24A175B500ADECFA /* Tests_macOS.swift */; };
 		D16CF82F24A175B500ADECFA /* FeedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D16CF80624A175B400ADECFA /* FeedsApp.swift */; };
@@ -20,26 +17,28 @@
 		D17CF20B24A59C58003C297E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20A24A59C58003C297E /* Array.swift */; };
 		D17CF20D24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20C24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift */; };
 		D17CF20F24A59CA1003C297E /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20E24A59CA1003C297E /* Color+hex.swift */; };
-		D17CF21124A59E10003C297E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21024A59E10003C297E /* User.swift */; };
-		D17CF21324A59E20003C297E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21224A59E20003C297E /* Timeline.swift */; };
-		D17CF21524A59E30003C297E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21424A59E30003C297E /* Post.swift */; };
-		D17CF21724A59E4D003C297E /* DateSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21624A59E4D003C297E /* DateSortable.swift */; };
-		D17CF21924A59E61003C297E /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21824A59E61003C297E /* Filterable.swift */; };
-		D17CF21D24A59EA8003C297E /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21C24A59EA8003C297E /* InstagramAPI.swift */; };
-		D17CF22324A59F43003C297E /* InstagramFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF22224A59F43003C297E /* InstagramFeed.swift */; };
-		D17CF22424A59FDE003C297E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21424A59E30003C297E /* Post.swift */; };
-		D17CF22524A59FDE003C297E /* DateSortable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21624A59E4D003C297E /* DateSortable.swift */; };
-		D17CF22624A59FDE003C297E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21024A59E10003C297E /* User.swift */; };
-		D17CF22724A59FDE003C297E /* Filterable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21824A59E61003C297E /* Filterable.swift */; };
-		D17CF22824A59FDE003C297E /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF21224A59E20003C297E /* Timeline.swift */; };
-		D17CF22C24A59FE4003C297E /* InstagramFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF22224A59F43003C297E /* InstagramFeed.swift */; };
 		D17CF22D24A59FEB003C297E /* Color+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20E24A59CA1003C297E /* Color+hex.swift */; };
 		D17CF22E24A59FEB003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20C24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift */; };
 		D17CF22F24A59FEB003C297E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF20A24A59C58003C297E /* Array.swift */; };
-		D17CF23124A5A017003C297E /* InstagramCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF23024A5A017003C297E /* InstagramCard.swift */; };
-		D17CF23324A5A054003C297E /* AddNewInstagramFeeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17CF23224A5A054003C297E /* AddNewInstagramFeeds.swift */; };
 		D18AA7FD24A5A11D00833812 /* KingfisherSwiftUIStatic in Frameworks */ = {isa = PBXBuildFile; productRef = D18AA7FC24A5A11D00833812 /* KingfisherSwiftUIStatic */; };
 		D18AA80024A5A12B00833812 /* KingfisherSwiftUIStatic in Frameworks */ = {isa = PBXBuildFile; productRef = D18AA7FF24A5A12B00833812 /* KingfisherSwiftUIStatic */; };
+		D1A3FF9424BA2312000A2CD8 /* Environment+DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A3FF9324BA2312000A2CD8 /* Environment+DeviceType.swift */; };
+		D1A3FF9524BA2312000A2CD8 /* Environment+DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A3FF9324BA2312000A2CD8 /* Environment+DeviceType.swift */; };
+		D1AFA3DD24B5268C0005A102 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3DC24B5268C0005A102 /* AppState.swift */; };
+		D1AFA3DE24B5268C0005A102 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3DC24B5268C0005A102 /* AppState.swift */; };
+		D1AFA3E024B526B40005A102 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3DF24B526B40005A102 /* Store.swift */; };
+		D1AFA3E124B526B40005A102 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3DF24B526B40005A102 /* Store.swift */; };
+		D1AFA3E324B526E20005A102 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3E224B526E20005A102 /* AppAction.swift */; };
+		D1AFA3E424B526E20005A102 /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3E224B526E20005A102 /* AppAction.swift */; };
+		D1AFA3E624B527610005A102 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3E524B527610005A102 /* Reducer.swift */; };
+		D1AFA3E724B527610005A102 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3E524B527610005A102 /* Reducer.swift */; };
+		D1AFA3E924B529C20005A102 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3E824B529C20005A102 /* World.swift */; };
+		D1AFA3EA24B529C20005A102 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3E824B529C20005A102 /* World.swift */; };
+		D1AFA3ED24B52D210005A102 /* HomeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3EC24B52D210005A102 /* HomeFeed.swift */; };
+		D1AFA3EE24B52D210005A102 /* HomeFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3EC24B52D210005A102 /* HomeFeed.swift */; };
+		D1AFA3F424B536060005A102 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3F324B536060005A102 /* Feed.swift */; };
+		D1AFA3F524B536060005A102 /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1AFA3F324B536060005A102 /* Feed.swift */; };
+		D1AFA3F624B537290005A102 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14A2A6B24AF8E6C00580117 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D0F3553724B053CA00D0C7EE /* RedditAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAPI.swift; sourceTree = "<group>"; };
-		D14A2A6B24AF8E6C00580117 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
-		D155EE5624B05B4D00F99B8B /* Reddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
+		D14A2A6B24AF8E6C00580117 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D16CF80624A175B400ADECFA /* FeedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsApp.swift; sourceTree = "<group>"; };
 		D16CF80824A175B500ADECFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D16CF80D24A175B500ADECFA /* Feeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,15 +76,14 @@
 		D17CF20A24A59C58003C297E /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		D17CF20C24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTaskPublisher+validate.swift"; sourceTree = "<group>"; };
 		D17CF20E24A59CA1003C297E /* Color+hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+hex.swift"; sourceTree = "<group>"; };
-		D17CF21024A59E10003C297E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		D17CF21224A59E20003C297E /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		D17CF21424A59E30003C297E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		D17CF21624A59E4D003C297E /* DateSortable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSortable.swift; sourceTree = "<group>"; };
-		D17CF21824A59E61003C297E /* Filterable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filterable.swift; sourceTree = "<group>"; };
-		D17CF21C24A59EA8003C297E /* InstagramAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
-		D17CF22224A59F43003C297E /* InstagramFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramFeed.swift; sourceTree = "<group>"; };
-		D17CF23024A5A017003C297E /* InstagramCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramCard.swift; sourceTree = "<group>"; };
-		D17CF23224A5A054003C297E /* AddNewInstagramFeeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewInstagramFeeds.swift; sourceTree = "<group>"; };
+		D1A3FF9324BA2312000A2CD8 /* Environment+DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Environment+DeviceType.swift"; sourceTree = "<group>"; };
+		D1AFA3DC24B5268C0005A102 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		D1AFA3DF24B526B40005A102 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		D1AFA3E224B526E20005A102 /* AppAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAction.swift; sourceTree = "<group>"; };
+		D1AFA3E524B527610005A102 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		D1AFA3E824B529C20005A102 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
+		D1AFA3EC24B52D210005A102 /* HomeFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFeed.swift; sourceTree = "<group>"; };
+		D1AFA3F324B536060005A102 /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,9 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				D16CF80624A175B400ADECFA /* FeedsApp.swift */,
+				D1AFA3DB24B5266A0005A102 /* App */,
 				D17CF20724A59C21003C297E /* Models */,
-				D17CF21A24A59E71003C297E /* ViewModels */,
-				D17CF20924A59C38003C297E /* Views */,
+				D1AFA3EB24B52D0F0005A102 /* Views */,
 				D17CF20624A59C19003C297E /* Extensions */,
 				D16CF80824A175B500ADECFA /* Assets.xcassets */,
 			);
@@ -202,6 +198,7 @@
 				D17CF20A24A59C58003C297E /* Array.swift */,
 				D17CF20C24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift */,
 				D17CF20E24A59CA1003C297E /* Color+hex.swift */,
+				D1A3FF9324BA2312000A2CD8 /* Environment+DeviceType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -209,42 +206,9 @@
 		D17CF20724A59C21003C297E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D17CF20824A59C28003C297E /* Instagram */,
-				D155EE5624B05B4D00F99B8B /* Reddit.swift */,
-				D17CF21624A59E4D003C297E /* DateSortable.swift */,
-				D17CF21824A59E61003C297E /* Filterable.swift */,
+				D14A2A6B24AF8E6C00580117 /* Post.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		D17CF20824A59C28003C297E /* Instagram */ = {
-			isa = PBXGroup;
-			children = (
-				D17CF21024A59E10003C297E /* User.swift */,
-				D17CF21224A59E20003C297E /* Timeline.swift */,
-				D17CF21424A59E30003C297E /* Post.swift */,
-			);
-			path = Instagram;
-			sourceTree = "<group>";
-		};
-		D17CF20924A59C38003C297E /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D17CF22224A59F43003C297E /* InstagramFeed.swift */,
-				D17CF23024A5A017003C297E /* InstagramCard.swift */,
-				D17CF23224A5A054003C297E /* AddNewInstagramFeeds.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D17CF21A24A59E71003C297E /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				D17CF21C24A59EA8003C297E /* InstagramAPI.swift */,
-				D0F3553724B053CA00D0C7EE /* RedditAPI.swift */,
-				D14A2A6B24AF8E6C00580117 /* CardViewModel.swift */,
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		D18AA7FE24A5A12B00833812 /* Frameworks */ = {
@@ -252,6 +216,27 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1AFA3DB24B5266A0005A102 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D1AFA3DF24B526B40005A102 /* Store.swift */,
+				D1AFA3DC24B5268C0005A102 /* AppState.swift */,
+				D1AFA3E224B526E20005A102 /* AppAction.swift */,
+				D1AFA3E524B527610005A102 /* Reducer.swift */,
+				D1AFA3E824B529C20005A102 /* World.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D1AFA3EB24B52D0F0005A102 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1AFA3EC24B52D210005A102 /* HomeFeed.swift */,
+				D1AFA3F324B536060005A102 /* Feed.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,21 +405,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D17CF21724A59E4D003C297E /* DateSortable.swift in Sources */,
+				D1A3FF9424BA2312000A2CD8 /* Environment+DeviceType.swift in Sources */,
+				D1AFA3E324B526E20005A102 /* AppAction.swift in Sources */,
+				D1AFA3F424B536060005A102 /* Feed.swift in Sources */,
 				D17CF20D24A59C75003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */,
-				D17CF21324A59E20003C297E /* Timeline.swift in Sources */,
-				D155EE5724B05B4D00F99B8B /* Reddit.swift in Sources */,
-				D17CF21D24A59EA8003C297E /* InstagramAPI.swift in Sources */,
-				D14A2A6C24AF8E6C00580117 /* CardViewModel.swift in Sources */,
-				D17CF23324A5A054003C297E /* AddNewInstagramFeeds.swift in Sources */,
+				D1AFA3E024B526B40005A102 /* Store.swift in Sources */,
+				D14A2A6C24AF8E6C00580117 /* Post.swift in Sources */,
+				D1AFA3ED24B52D210005A102 /* HomeFeed.swift in Sources */,
+				D1AFA3DD24B5268C0005A102 /* AppState.swift in Sources */,
+				D1AFA3E924B529C20005A102 /* World.swift in Sources */,
 				D17CF20F24A59CA1003C297E /* Color+hex.swift in Sources */,
-				D17CF22324A59F43003C297E /* InstagramFeed.swift in Sources */,
-				D17CF21524A59E30003C297E /* Post.swift in Sources */,
-				D17CF23124A5A017003C297E /* InstagramCard.swift in Sources */,
-				D17CF21124A59E10003C297E /* User.swift in Sources */,
-				D0F3553824B053CA00D0C7EE /* RedditAPI.swift in Sources */,
 				D17CF20B24A59C58003C297E /* Array.swift in Sources */,
-				D17CF21924A59E61003C297E /* Filterable.swift in Sources */,
+				D1AFA3E624B527610005A102 /* Reducer.swift in Sources */,
 				D16CF82F24A175B500ADECFA /* FeedsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,17 +425,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D17CF22424A59FDE003C297E /* Post.swift in Sources */,
-				D17CF22824A59FDE003C297E /* Timeline.swift in Sources */,
-				D17CF22724A59FDE003C297E /* Filterable.swift in Sources */,
+				D1A3FF9524BA2312000A2CD8 /* Environment+DeviceType.swift in Sources */,
+				D1AFA3EA24B529C20005A102 /* World.swift in Sources */,
+				D1AFA3EE24B52D210005A102 /* HomeFeed.swift in Sources */,
+				D1AFA3DE24B5268C0005A102 /* AppState.swift in Sources */,
+				D1AFA3F624B537290005A102 /* Post.swift in Sources */,
 				D16CF83024A175B500ADECFA /* FeedsApp.swift in Sources */,
-				D17CF22C24A59FE4003C297E /* InstagramFeed.swift in Sources */,
+				D1AFA3F524B536060005A102 /* Feed.swift in Sources */,
 				D17CF22F24A59FEB003C297E /* Array.swift in Sources */,
-				D155EE5824B05B4D00F99B8B /* Reddit.swift in Sources */,
+				D1AFA3E424B526E20005A102 /* AppAction.swift in Sources */,
+				D1AFA3E724B527610005A102 /* Reducer.swift in Sources */,
+				D1AFA3E124B526B40005A102 /* Store.swift in Sources */,
 				D17CF22D24A59FEB003C297E /* Color+hex.swift in Sources */,
-				D17CF22624A59FDE003C297E /* User.swift in Sources */,
 				D17CF22E24A59FEB003C297E /* URLSessionDataTaskPublisher+validate.swift in Sources */,
-				D17CF22524A59FDE003C297E /* DateSortable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
