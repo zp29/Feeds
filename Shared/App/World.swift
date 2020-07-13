@@ -6,7 +6,7 @@ struct World {
 }
 
 struct FeedsService {
-    let serverURL = URL(string: "http://localhost:3000")!
+    let serverURL = URL(string: "http://Mac-mini.local:3000")!
     
     func homeFeedPublisher() -> AnyPublisher<[Post], Error> {
         URLSession.shared

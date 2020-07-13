@@ -1,6 +1,5 @@
 import Foundation
 import SwiftUI
-import Combine
 
 struct Post: Identifiable, Codable {
     struct Media: Equatable, Codable {
@@ -8,17 +7,17 @@ struct Post: Identifiable, Codable {
         let isVideo: Bool
     }
 
-    enum Service: String, Equatable, Codable {
-        case twitter
-        case instagram
-        case dribbble
-        case github
-        case youtube
-        case reddit
-        case rss
-        case letterboxd
-        case tiktok
-    }
+//    enum Service: String, Equatable, Codable {
+//        case twitter
+//        case instagram
+//        case dribbble
+//        case github
+//        case youtube
+//        case reddit
+//        case rss
+//        case letterboxd
+//        case tiktok
+//    }
     
     let id: String
     

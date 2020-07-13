@@ -35,7 +35,7 @@ struct Content: View {
                     
                     Spacer()
                     
-                    Text(post.datePosted, style: .relative)
+                    Text(post.formattedDateTime)
                         .font(.system(size: 15))
                 }
                 
@@ -56,7 +56,7 @@ struct Content: View {
                 if let body = post.body {
                     Text(body)
                 }
-            }.padding()
+            }
         }
     }
 }
