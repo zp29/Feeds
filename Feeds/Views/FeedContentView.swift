@@ -1,20 +1,17 @@
 import UIKit
 import SwiftUI
 
-final class FeedCellContentView: UIView, UIContentView {
-    let post: Post
+final class FeedContentView: UIView, UIContentView {
+    var configuration: UIContentConfiguration
     
-    var configuration: UIContentConfiguration {
-        get { FeedsContentConfiguration(post: post) }
-        set {}
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configuration.
     }
     
     init(post: Post) {
         self.post = post
-        
-        let feedsCell = FeedCell(post: post)
-        let hostingVC = UIHostingController(rootView: feedsCell)
-        
+                
         super.init(frame: hostingVC.view.frame)
         
         addSubview(hostingVC.view)
@@ -38,7 +35,7 @@ struct FeedsContentConfiguration: UIContentConfiguration {
     var post: Post
     
     func makeContentView() -> UIView & UIContentView {
-        FeedCellContentView(post: post)
+        FeedContentView(post: post)
     }
     
     func updated(for state: UIConfigurationState) -> FeedsContentConfiguration {
