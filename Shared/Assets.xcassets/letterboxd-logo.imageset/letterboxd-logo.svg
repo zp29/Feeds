@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Feed icon</title>
+    <g id="Original" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Feeds" transform="translate(-346.000000, -4543.000000)">
+            <g id="Letterboxd-/-Review" transform="translate(16.000000, 4531.000000)">
+                <g id="Header" transform="translate(16.000000, 12.000000)">
+                    <g id="Feed-icon" transform="translate(314.000000, 0.000000)">
+                        <circle id="Bounds" cx="18" cy="18" r="18"></circle>
+                        <g id="Logo" transform="translate(2.000000, 12.000000)" fill-rule="nonzero">
+                            <circle id="Orange" fill="#FF8000" cx="5.89473684" cy="5.89473684" r="5.89473684"></circle>
+                            <circle id="Green" fill="#00E054" cx="16" cy="5.89473684" r="5.89473684"></circle>
+                            <circle id="Blue" fill="#40BCF4" cx="26.1052632" cy="5.89473684" r="5.89473684"></circle>
+                            <path d="M10.9476232,2.85719198 C11.4820512,3.74429335 11.7894737,4.78361392 11.7894737,5.89473684 C11.7894737,7.00585977 11.4820512,8.04518033 10.9476232,8.93228171 C10.4126856,8.04518033 10.1052632,7.00585977 10.1052632,5.89473684 C10.1052632,4.78488232 10.4119841,3.74666632 10.9452843,2.86023059 L10.9476232,2.85719198 Z M21.0528863,2.85719198 C21.5873144,3.74429335 21.8947368,4.78361392 21.8947368,5.89473684 C21.8947368,7.00585977 21.5873144,8.04518033 21.0528863,8.93228171 C20.5179488,8.04518033 20.2105263,7.00585977 20.2105263,5.89473684 C20.2105263,4.78488232 20.5172473,3.74666632 21.0505475,2.86023059 L21.0528863,2.85719198 Z" id="White" fill="#FFFFFF"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

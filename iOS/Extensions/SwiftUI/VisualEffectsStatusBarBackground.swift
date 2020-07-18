@@ -19,16 +19,17 @@ struct VisualEffectsStatusBarBackgroundModifier: ViewModifier {
             if !isPhone && !isPad {
                 content
             } else {
-                content
-                    .background(
-                        VStack {
-                            VisualEffectBlur(blurStyle: .regular, vibrancyStyle: .fill) { EmptyView() }
-                            .frame(width: width, height: height)
-                            .edgesIgnoringSafeArea(.all)
+                ZStack {
+                    content
+                    
+                    VStack {
+                        VisualEffectBlur(blurStyle: .regular, vibrancyStyle: .fill) { EmptyView() }
+                        .frame(width: width, height: height)
+                        .edgesIgnoringSafeArea(.all)
 
-                            Spacer()
-                        }
-                    )
+                        Spacer()
+                    }
+                }
             }
         }
     }

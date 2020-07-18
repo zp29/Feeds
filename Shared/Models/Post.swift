@@ -1,17 +1,21 @@
 import Foundation
+import UIKit
 
 struct Post: Hashable, Identifiable, Codable {
-    struct Media: Hashable, Codable {
-//        let id = UUID()
-        let source: URL
-        let isVideo: Bool
-    }
-
     let id: String
     
     let avatar: URL
     let displayName: String
     let username: String
+    
+    let service: String
+    var serviceImageName: String {
+        guard UIImage(named: "\(service)-logo") != nil else {
+            return "rss-logo"
+        }
+        
+        return "\(service)-logo"
+    }
     
     let media: [Media]
     var containsMultipleMedia: Bool { media.count > 1 }
@@ -19,6 +23,14 @@ struct Post: Hashable, Identifiable, Codable {
     
     private(set) var title: String? = nil
     private(set) var body: String? = nil
+    
+    var bodyURL: URL? {
+        guard let body = body,
+              let url = URL(string: body)
+        else { return nil }
+        
+        return url
+    }
     
     let datePosted: Date
     
@@ -45,7 +57,7 @@ struct Post: Hashable, Identifiable, Codable {
     }
     
     // FIXME: This was coming in malformed from the server
-//    let shareURL: URL
+    let shareURL: URL
 }
 
 extension Post: Comparable {
@@ -63,5 +75,13 @@ extension Post: Comparable {
 
     static func > (lhs: Self, rhs: Self) -> Bool {
         lhs.datePosted < rhs.datePosted
+    }
+}
+
+extension Post {
+    struct Media: Hashable, Codable {
+        // let id = UUID()
+        let source: URL
+        let isVideo: Bool
     }
 }

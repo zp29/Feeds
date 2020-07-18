@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Feed icon</title>
+    <g id="Original" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Two-column" transform="translate(-1083.000000, -371.000000)">
+            <g id="Content" transform="translate(320.000000, 0.000000)">
+                <g id="Cards" transform="translate(52.000000, 154.000000)">
+                    <g id="RSS-/-The-Verge" transform="translate(410.000000, 0.000000)">
+                        <g id="Header" transform="translate(25.000000, 217.000000)">
+                            <g id="Feed-icon" transform="translate(276.000000, 0.000000)">
+                                <circle id="Bounds" cx="18" cy="18" r="18"></circle>
+                                <path d="M8,14.7428571 C15.3217178,14.7428571 21.2571429,20.6782822 21.2571429,28 L17.3714286,28 C17.3714286,22.8243029 13.1756971,18.6285714 8,18.6285714 L8,14.7428571 Z M8,8 C19.045695,8 28,16.954305 28,28 L24,28 C24,19.163444 16.836556,12 8,12 L8,8 Z M10.7428571,22.5142857 C12.2576953,22.5142857 13.4857143,23.7423047 13.4857143,25.2571429 C13.4857143,26.771981 12.2576953,28 10.7428571,28 C9.22801897,28 8,26.771981 8,25.2571429 C8,23.7423047 9.22801897,22.5142857 10.7428571,22.5142857 Z" id="Logo" fill="#59B964" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

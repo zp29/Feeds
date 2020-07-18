@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D117B32224C3ABA4006FF257 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117B32124C3ABA4006FF257 /* FontSize.swift */; };
+		D117B32324C3ABA4006FF257 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117B32124C3ABA4006FF257 /* FontSize.swift */; };
 		D13FD45F24C37E88001E8BFB /* FeedsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13FD44C24C37E88001E8BFB /* FeedsApp.swift */; };
 		D13FD47724C37F8D001E8BFB /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13FD47224C37F8D001E8BFB /* AppAction.swift */; };
 		D13FD47824C37F8D001E8BFB /* AppAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13FD47224C37F8D001E8BFB /* AppAction.swift */; };
@@ -48,9 +50,15 @@
 		D13FD4CC24C3831D001E8BFB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13FD49D24C37FBB001E8BFB /* Card.swift */; };
 		D13FD4CE24C38378001E8BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13FD4CD24C38378001E8BFB /* Assets.xcassets */; };
 		D13FD4CF24C38378001E8BFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D13FD4CD24C38378001E8BFB /* Assets.xcassets */; };
+		D14D51A124C390390001808B /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D51A024C390390001808B /* ShareSheet.swift */; };
+		D14D51A324C393940001808B /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D51A224C393940001808B /* RoundedCorners.swift */; };
+		D14D51A424C393940001808B /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D51A224C393940001808B /* RoundedCorners.swift */; };
+		D14D51A624C3A33F0001808B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D51A524C3A33F0001808B /* SafariView.swift */; };
+		D14D51A724C3A33F0001808B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D51A524C3A33F0001808B /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D117B32124C3ABA4006FF257 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		D13FD44C24C37E88001E8BFB /* FeedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsApp.swift; sourceTree = "<group>"; };
 		D13FD45324C37E88001E8BFB /* Feeds.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feeds.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13FD45624C37E88001E8BFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +89,9 @@
 		D13FD4BA24C3824B001E8BFB /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D13FD4BB24C3824B001E8BFB /* Subscriptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subscriptions.swift; sourceTree = "<group>"; };
 		D13FD4CD24C38378001E8BFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D14D51A024C390390001808B /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		D14D51A224C393940001808B /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
+		D14D51A524C3A33F0001808B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +231,8 @@
 			isa = PBXGroup;
 			children = (
 				D13FD49D24C37FBB001E8BFB /* Card.swift */,
+				D14D51A224C393940001808B /* RoundedCorners.swift */,
+				D117B32124C3ABA4006FF257 /* FontSize.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +268,8 @@
 				D13FD4B824C381F4001E8BFB /* PullToRefresh.swift */,
 				D13FD4B724C381F4001E8BFB /* VisualEffectsStatusBarBackground.swift */,
 				D13FD4B624C381F4001E8BFB /* Environment+DeviceType.swift */,
+				D14D51A024C390390001808B /* ShareSheet.swift */,
+				D14D51A524C3A33F0001808B /* SafariView.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -376,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13FD4BE24C3824B001E8BFB /* Subscriptions.swift in Sources */,
+				D14D51A624C3A33F0001808B /* SafariView.swift in Sources */,
 				D13FD4AE24C38054001E8BFB /* AppDelegate.swift in Sources */,
 				D13FD4A224C37FBB001E8BFB /* CompactToday.swift in Sources */,
 				D13FD4A524C37FBB001E8BFB /* Card.swift in Sources */,
@@ -386,6 +402,7 @@
 				D13FD4A124C37FBB001E8BFB /* CompactAddSubscriptions.swift in Sources */,
 				D13FD4A324C37FBB001E8BFB /* CompactSubscriptions.swift in Sources */,
 				D13FD48B24C37F9B001E8BFB /* Color+hex.swift in Sources */,
+				D14D51A124C390390001808B /* ShareSheet.swift in Sources */,
 				D13FD49524C37F9B001E8BFB /* URL+StaticString.swift in Sources */,
 				D13FD4AD24C38054001E8BFB /* SceneDelegate.swift in Sources */,
 				D13FD4C924C38310001E8BFB /* Environment+DeviceType.swift in Sources */,
@@ -396,9 +413,11 @@
 				D13FD4A424C37FBB001E8BFB /* CompactView.swift in Sources */,
 				D13FD4A624C37FBB001E8BFB /* SplitView.swift in Sources */,
 				D13FD47724C37F8D001E8BFB /* AppAction.swift in Sources */,
+				D14D51A324C393940001808B /* RoundedCorners.swift in Sources */,
 				D13FD47B24C37F8D001E8BFB /* AppState.swift in Sources */,
 				D13FD4A724C37FBB001E8BFB /* PrimaryView.swift in Sources */,
 				D13FD4BC24C3824B001E8BFB /* Post.swift in Sources */,
+				D117B32224C3ABA4006FF257 /* FontSize.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,14 +426,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13FD47E24C37F8D001E8BFB /* Store.swift in Sources */,
+				D117B32324C3ABA4006FF257 /* FontSize.swift in Sources */,
 				D13FD49424C37F9B001E8BFB /* MergeManyValues.swift in Sources */,
 				D13FD48C24C37F9B001E8BFB /* Color+hex.swift in Sources */,
 				D13FD49624C37F9B001E8BFB /* URL+StaticString.swift in Sources */,
 				D13FD47A24C37F8D001E8BFB /* World.swift in Sources */,
 				D13FD48024C37F8D001E8BFB /* Reducer.swift in Sources */,
+				D14D51A724C3A33F0001808B /* SafariView.swift in Sources */,
 				D13FD49224C37F9B001E8BFB /* URLSessionDataTaskPublisher+validate.swift in Sources */,
 				D13FD4CC24C3831D001E8BFB /* Card.swift in Sources */,
 				D13FD47824C37F8D001E8BFB /* AppAction.swift in Sources */,
+				D14D51A424C393940001808B /* RoundedCorners.swift in Sources */,
 				D13FD47C24C37F8D001E8BFB /* AppState.swift in Sources */,
 				D13FD4BD24C3824B001E8BFB /* Post.swift in Sources */,
 				D13FD4BF24C3824B001E8BFB /* Subscriptions.swift in Sources */,
