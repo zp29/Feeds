@@ -1,5 +1,5 @@
 struct AppState {
-    var homeFeed = [Post]()
+    var todayFeed = [Post]()
     var isLoading = false
     var subscribers = FeedsServer.Subscriptions.empty
 }

@@ -15,7 +15,7 @@ struct CompactToday: View {
     
     var body: some View {
         Group {
-            if store.state.homeFeed.isEmpty {
+            if store.state.todayFeed.isEmpty {
                 ProgressView()
             } else {
                 ScrollView {
@@ -38,7 +38,7 @@ struct CompactToday: View {
                                     .fontSize(34)
                             }.padding()
                             
-                            ForEach(store.state.homeFeed) { post in
+                            ForEach(store.state.todayFeed) { post in
                                 Card(post: post)
                             }
                         }

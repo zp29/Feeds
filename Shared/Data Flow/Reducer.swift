@@ -11,7 +11,7 @@ func appReducer(state: inout AppState, action: AppAction, environment: World) ->
             .map { .setToday(posts: $0) }
             .eraseToAnyPublisher()
     case .setToday(posts: let posts):
-        state.homeFeed = posts
+        state.todayFeed = posts
         return AppAction.setIsLoading(false).publisher
 
     case .setIsLoading(let bool):

@@ -10,7 +10,7 @@ struct CompactSubscriptions: View {
     var body: some View {
         NavigationView {
             Group {
-                if store.state.homeFeed.isEmpty {
+                if store.state.todayFeed.isEmpty {
                     ProgressView()
                 } else {
                     List {
