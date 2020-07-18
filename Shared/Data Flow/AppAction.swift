@@ -5,8 +5,8 @@ enum AppAction {
     case setToday(posts: [Post])
     
     case getSubscribers
-    case setSubscribers(subscribers: Feeds.Subscriptions)
-    case updateSubscribers(subscribers: Feeds.Subscriptions)
+    case setSubscribers(subscribers: FeedsServer.Subscriptions)
+    case updateSubscribers(subscribers: FeedsServer.Subscriptions)
     
     case setIsLoading(Bool)
     

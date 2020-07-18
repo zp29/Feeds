@@ -2,6 +2,7 @@ import Foundation
 
 struct Post: Hashable, Identifiable, Codable {
     struct Media: Hashable, Codable {
+//        let id = UUID()
         let source: URL
         let isVideo: Bool
     }

@@ -6,7 +6,7 @@ func appReducer(state: inout AppState, action: AppAction, environment: World) ->
     switch action {
     case .getToday:
         return environment
-            .feeds.getTodayFeed().publisher
+            .feedsServer.getTodayFeed().publisher
             .replaceError(with: [])
             .map { .setToday(posts: $0) }
             .eraseToAnyPublisher()
@@ -19,14 +19,14 @@ func appReducer(state: inout AppState, action: AppAction, environment: World) ->
         
     case .updateSubscribers(subscribers: let subcribers):
         return environment
-            .feeds.updateSubscribers(subcribers).publisher
+            .feedsServer.updateSubscribers(subcribers).publisher
             .replaceError(with: ())
             .map { _ in .getSubscribers }
             .eraseToAnyPublisher()
     case .getSubscribers:
         return environment
-            .feeds.getSubscribers().publisher
-            .replaceError(with: Feeds.Subscriptions.empty)
+            .feedsServer.getSubscribers().publisher
+            .replaceError(with: FeedsServer.Subscriptions.empty)
             .map { .setSubscribers(subscribers: $0) }
             .eraseToAnyPublisher()
     case .setSubscribers(subscribers: let sub):

@@ -1,6 +1,6 @@
 import SwiftUI
 import UIKit
-import Introspect
+//import Introspect
 
 struct CompactAddSubscriptions: View {
     @EnvironmentObject var store: AppStore
@@ -46,7 +46,7 @@ struct CompactAddSubscriptions: View {
                     Button("Update") {
                         defer { isOpen = false }
                         guard !instagramUsers.isEmpty && !subreddits.isEmpty else { return }
-                        let sub = Feeds.Subscriptions(instagram: instagramUsers, reddit: subreddits)
+                        let sub = FeedsServer.Subscriptions(instagram: instagramUsers, reddit: subreddits)
                         store.send(.updateSubscribers(subscribers: sub))
                     }
                 }

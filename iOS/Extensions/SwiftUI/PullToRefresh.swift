@@ -1,10 +1,8 @@
 import SwiftUI
 
 extension View {
-    func pullToRefresh(isReloading: Binding<Bool>, action: (() -> Void)? = nil) -> some View {
-        var defaultAction: () -> Void = {}
-        if let act = action { defaultAction = act }
-        return background(PullToRefresh(action: defaultAction, isReloading: isReloading))
+    func pullToRefresh(isReloading: Binding<Bool>, action: @escaping () -> Void) -> some View {
+        background(PullToRefresh(action: action, isReloading: isReloading))
     }
 }
 

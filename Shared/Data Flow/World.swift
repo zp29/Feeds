@@ -3,29 +3,22 @@ import Combine
 import TinyNetworking
 
 struct World {
-    let feeds = Feeds()
+    let feedsServer = FeedsServer()
 }
 
-struct Feeds {
-    struct Subscriptions: Codable {
-        let instagram: [String]
-        let reddit: [String]
-        
-        static let empty = Subscriptions(instagram: [], reddit: [])
-    }
-
-    let base = URL(staticString: "http://Marks-BP3-MacBook-Pro.local:3000") // "http://Mac-mini.local:3000"
+struct FeedsServer {
+    let base = URL(staticString: "http://Marks-Mac-mini.local:3000") // "http://Marks-BP3-MacBook-Pro.local:3000"
     
     func getTodayFeed() -> Endpoint<[Post]> {
         Endpoint<[Post]>(json: .get, url: base)
     }
     
-    func getSubscribers() -> Endpoint<Feeds.Subscriptions> {
-        Endpoint<Feeds.Subscriptions>(json: .get, url: base.appendingPathComponent("subscriptions"))
+    func getSubscribers() -> Endpoint<Subscriptions> {
+        Endpoint<Subscriptions>(json: .get, url: base.appendingPathComponent("subscriptions"))
     }
     
     func updateSubscribers(_ subscribers: Subscriptions) -> Endpoint<()> {
-        Endpoint<()>(
+        Endpoint(
             json: .post,
             url: base.appendingPathComponent("subscribers"),
             accept: .json,

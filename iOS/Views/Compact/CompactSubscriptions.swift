@@ -43,7 +43,7 @@ struct CompactSubscriptions: View {
             }
         }
         .tabItem {
-            Image(systemName: "rectangle.stack")
+            Image(systemName: "rectangle.stack.fill")
             Text(title)
         }
         .onAppear(perform: fetch)
@@ -55,6 +55,6 @@ struct CompactSubscriptions: View {
     }
     
     func update() {
-        store.send(.updateSubscribers(subscribers: Feeds.Subscriptions.empty))
+        store.send(.updateSubscribers(subscribers: FeedsServer.Subscriptions.empty))
     }
 }

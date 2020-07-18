@@ -28,7 +28,7 @@ struct CompactToday: View {
             .navigationTitle("Today")
         }
         .tabItem {
-            Image(systemName: "newspaper")
+            Image(systemName: "newspaper.fill")
             Text("Today")
         }
         .onAppear(perform: fetch)
