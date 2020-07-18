@@ -11,12 +11,30 @@
         }
       },
       {
-        "package": "SnapKit",
-        "repositoryURL": "https://github.com/SnapKit/SnapKit",
+        "package": "Introspect",
+        "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect",
         "state": {
           "branch": null,
-          "revision": "d458564516e5676af9c70b4f4b2a9178294f1bc6",
-          "version": "5.0.1"
+          "revision": "de5c32c15ae169cfcb27397ffb2734dcd0e1e6d5",
+          "version": "0.1.0"
+        }
+      },
+      {
+        "package": "TinyNetworking",
+        "repositoryURL": "https://github.com/objcio/tiny-networking",
+        "state": {
+          "branch": null,
+          "revision": "15a416c762e2a91f9eac73b3fbe55adf571c3aba",
+          "version": "0.4.0"
+        }
+      },
+      {
+        "package": "VisualEffects",
+        "repositoryURL": "https://github.com/twostraws/VisualEffects",
+        "state": {
+          "branch": null,
+          "revision": "053afdddfe4eefa6ed2f445511d455cfeb546896",
+          "version": "1.0.2"
         }
       }
     ]

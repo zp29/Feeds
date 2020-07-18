@@ -43,7 +43,8 @@ struct Post: Hashable, Identifiable, Codable {
         "\(dateFormatter.string(from: datePosted)) • \(timeFormatter.string(from: datePosted))"
     }
     
-    let shareURL: URL
+    // FIXME: This was coming in malformed from the server
+//    let shareURL: URL
 }
 
 extension Post: Comparable {

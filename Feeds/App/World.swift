@@ -1,19 +1,41 @@
 import Foundation
 import Combine
+import TinyNetworking
 
 struct World {
-    let service = FeedsService()
+    let feeds = Feeds()
 }
 
-struct FeedsService {
-    let serverURL = URL(string: "http://localhost:3000")! // "http://Mac-mini.local:3000"
+struct Feeds {
+    struct Subscriptions: Codable {
+        let instagram: [String]
+        let reddit: [String]
+        
+        static let empty = Subscriptions(instagram: [], reddit: [])
+    }
+
+    let base = URL(staticString: "http://Marks-BP3-MacBook-Pro.local:3000") // "http://Mac-mini.local:3000"
     
-    func homeFeedPublisher() -> AnyPublisher<[Post], Error> {
-        URLSession.shared
-            .dataTaskPublisher(for: serverURL)
-            .validate()
-            .decode(type: [Post].self, decoder: JSONDecoder())
-            .print()
-            .eraseToAnyPublisher()
+    func getTodayFeed() -> Endpoint<[Post]> {
+        Endpoint<[Post]>(json: .get, url: base)
+    }
+    
+    func getSubscribers() -> Endpoint<Feeds.Subscriptions> {
+        Endpoint<Feeds.Subscriptions>(json: .get, url: base.appendingPathComponent("subscriptions"))
+    }
+    
+    func updateSubscribers(_ subscribers: Subscriptions) -> Endpoint<()> {
+        Endpoint<()>(
+            json: .post,
+            url: base.appendingPathComponent("subscribers"),
+            accept: .json,
+            body: subscribers
+        )
+    }
+}
+
+extension Endpoint {
+    var publisher: AnyPublisher<A, Error> {
+        URLSession.shared.load(self)
     }
 }

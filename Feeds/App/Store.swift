@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import SwiftUI
 
 final class Store<State, Action, Environment>: ObservableObject {
     @Published private(set) var state: State
@@ -27,5 +28,15 @@ final class Store<State, Action, Environment>: ObservableObject {
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: send)
             .store(in: &cancellables)
+    }
+    
+    func binding<Value>(
+        for keyPath: KeyPath<State, Value>,
+        transform: @escaping (Value) -> Action
+    ) -> Binding<Value> {
+        Binding<Value>(
+            get: { self.state[keyPath: keyPath] },
+            set: { self.send(transform($0)) }
+        )
     }
 }
