@@ -59,6 +59,8 @@
 		D14D51A724C3A33F0001808B /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14D51A524C3A33F0001808B /* SafariView.swift */; };
 		D1DD7A8A24C3C745003EBACA /* Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD7A8924C3C745003EBACA /* Dribbble.swift */; };
 		D1DD7A8B24C3C745003EBACA /* Dribbble.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD7A8924C3C745003EBACA /* Dribbble.swift */; };
+		D1DD7A8D24C3CFE1003EBACA /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD7A8C24C3CFE1003EBACA /* Env.swift */; };
+		D1DD7A8E24C3CFE1003EBACA /* Env.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DD7A8C24C3CFE1003EBACA /* Env.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -99,6 +101,7 @@
 		D14D51A524C3A33F0001808B /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		D1DD7A8824C3C513003EBACA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D1DD7A8924C3C745003EBACA /* Dribbble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dribbble.swift; sourceTree = "<group>"; };
+		D1DD7A8C24C3CFE1003EBACA /* Env.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Env.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +137,7 @@
 		D13FD44624C37E88001E8BFB = {
 			isa = PBXGroup;
 			children = (
+				D1DD7A8C24C3CFE1003EBACA /* Env.swift */,
 				D1DD7A8824C3C513003EBACA /* README.md */,
 				D13FD44B24C37E88001E8BFB /* Shared */,
 				D13FD45524C37E88001E8BFB /* iOS */,
@@ -429,6 +433,7 @@
 				D13FD47F24C37F8D001E8BFB /* Reducer.swift in Sources */,
 				D13FD45F24C37E88001E8BFB /* FeedsApp.swift in Sources */,
 				D13FD49124C37F9B001E8BFB /* URLSessionDataTaskPublisher+validate.swift in Sources */,
+				D1DD7A8D24C3CFE1003EBACA /* Env.swift in Sources */,
 				D13FD4A424C37FBB001E8BFB /* CompactView.swift in Sources */,
 				D13FD4A624C37FBB001E8BFB /* SplitView.swift in Sources */,
 				D13FD47724C37F8D001E8BFB /* AppAction.swift in Sources */,
@@ -448,6 +453,7 @@
 				D13FD47E24C37F8D001E8BFB /* Store.swift in Sources */,
 				D1DD7A8B24C3C745003EBACA /* Dribbble.swift in Sources */,
 				D117B32324C3ABA4006FF257 /* FontSize.swift in Sources */,
+				D1DD7A8E24C3CFE1003EBACA /* Env.swift in Sources */,
 				D13FD49424C37F9B001E8BFB /* MergeManyValues.swift in Sources */,
 				D117B32724C3B92C006FF257 /* Reddit.swift in Sources */,
 				D13FD48C24C37F9B001E8BFB /* Color+hex.swift in Sources */,
