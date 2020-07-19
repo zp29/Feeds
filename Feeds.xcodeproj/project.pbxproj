@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		379069C324C3EC83007CE502 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379069C224C3EC83007CE502 /* KeyValueStore.swift */; };
+		379069C424C3EC83007CE502 /* KeyValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379069C224C3EC83007CE502 /* KeyValueStore.swift */; };
 		D117B32224C3ABA4006FF257 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117B32124C3ABA4006FF257 /* FontSize.swift */; };
 		D117B32324C3ABA4006FF257 /* FontSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117B32124C3ABA4006FF257 /* FontSize.swift */; };
 		D117B32624C3B92C006FF257 /* Reddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D117B32524C3B92C006FF257 /* Reddit.swift */; };
@@ -64,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		379069C224C3EC83007CE502 /* KeyValueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyValueStore.swift; sourceTree = "<group>"; };
 		D117B32124C3ABA4006FF257 /* FontSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSize.swift; sourceTree = "<group>"; };
 		D117B32524C3B92C006FF257 /* Reddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reddit.swift; sourceTree = "<group>"; };
 		D13FD44C24C37E88001E8BFB /* FeedsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsApp.swift; sourceTree = "<group>"; };
@@ -125,6 +128,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		379069C124C3EC30007CE502 /* KeyValueStore */ = {
+			isa = PBXGroup;
+			children = (
+				379069C224C3EC83007CE502 /* KeyValueStore.swift */,
+			);
+			path = KeyValueStore;
+			sourceTree = "<group>";
+		};
 		D117B32424C3B90F006FF257 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +160,7 @@
 		D13FD44B24C37E88001E8BFB /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				379069C124C3EC30007CE502 /* KeyValueStore */,
 				D13FD47124C37F73001E8BFB /* Data Flow */,
 				D13FD4B924C3824B001E8BFB /* Models */,
 				D13FD4A824C37FC0001E8BFB /* Views */,
@@ -413,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D13FD4BE24C3824B001E8BFB /* Subscriptions.swift in Sources */,
+				379069C324C3EC83007CE502 /* KeyValueStore.swift in Sources */,
 				D117B32624C3B92C006FF257 /* Reddit.swift in Sources */,
 				D14D51A624C3A33F0001808B /* SafariView.swift in Sources */,
 				D13FD4AE24C38054001E8BFB /* AppDelegate.swift in Sources */,
@@ -461,6 +474,7 @@
 				D13FD47A24C37F8D001E8BFB /* World.swift in Sources */,
 				D13FD48024C37F8D001E8BFB /* Reducer.swift in Sources */,
 				D14D51A724C3A33F0001808B /* SafariView.swift in Sources */,
+				379069C424C3EC83007CE502 /* KeyValueStore.swift in Sources */,
 				D13FD49224C37F9B001E8BFB /* URLSessionDataTaskPublisher+validate.swift in Sources */,
 				D13FD4CC24C3831D001E8BFB /* Card.swift in Sources */,
 				D13FD47824C37F8D001E8BFB /* AppAction.swift in Sources */,
