@@ -7,8 +7,10 @@ extension URL: Identifiable {
 
 struct Card: View {
     let post: Post
+    let cornerRadius: CGFloat = 15
     
     @Environment(\.colorScheme) var colorScheme
+    
     @State var shareSheetIsPresented = false
     @State private var isBookmarked = false
     @State private var bodyURL: URL? = nil
@@ -17,13 +19,11 @@ struct Card: View {
         colorScheme == .dark ? Color(hex: "1B1C1E") : Color.white
     }
     
-    let cornerRadius: CGFloat = 15
-    
     var body: some View {
         ZStack {
             cardColor
-                .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
-                .shadow(color: Color.black.opacity(0.15), radius: 15, x: 0, y: 8)
+                .rounded(corners: .allCorners, cornerRadius)
+                .shadow(color: Color.black.opacity(0.15), radius: 15, y: 8)
             
             content
                 .layoutPriority(150)
@@ -32,7 +32,6 @@ struct Card: View {
         .padding(.vertical, 6)
     }
 }
-
 
 // MARK:- Content
 extension Card {
@@ -43,7 +42,7 @@ extension Card {
                 KFImage(image.source)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .cornerRadius(cornerRadius, corners: [.topLeft, .topRight])
+                    .rounded(corners: [.topLeft, .topRight], cornerRadius)
                     .layoutPriority(100)
             }
         }
@@ -156,6 +155,8 @@ extension Card {
                 bottomRow
             }.padding(20)
         }.sheet(item: $bodyURL) { url in
+            // FIXME: SVC displays oddly this way, with a few visual bugs requiring `edgesIgnoringSafeArea`
+            // I would rather have it slide in from the side, maybe in a NavigationLink?
             SafariView(url: url).edgesIgnoringSafeArea(.all)
         }
     }
