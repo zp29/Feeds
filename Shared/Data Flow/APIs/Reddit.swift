@@ -14,8 +14,10 @@ struct Reddit {
     func getPosts(for subreddits: [String]) -> Endpoint<[Post]> {
         let joinedSubreddits = subreddits.joined(separator: "+")
         let url = base.appendingPathComponent("r/\(joinedSubreddits)/.json")
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .secondsSince1970
         
-        return Endpoint<Response>(json: .get, url: url)
+        return Endpoint<Response>(json: .get, url: url, decoder: decoder)
             .map { response in
                 return response.data.children.map { child in
                     let redditPost = child.data
@@ -53,7 +55,7 @@ struct Reddit {
                         datePosted: redditPost.created_utc,
                         shareURL: shareURL
                     )
-                }
+                }.sorted()
             }
     }
 }

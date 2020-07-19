@@ -10,11 +10,7 @@ struct Card: View {
     let cornerRadius: CGFloat = 15
     
     @Environment(\.colorScheme) var colorScheme
-    
-    @State var shareSheetIsPresented = false
-    @State private var isBookmarked = false
-    @State private var bodyURL: URL? = nil
-    
+
     var cardColor: Color {
         colorScheme == .dark ? Color(hex: "1B1C1E") : Color.white
     }
@@ -25,7 +21,7 @@ struct Card: View {
                 .rounded(corners: .allCorners, cornerRadius)
                 .shadow(color: Color.black.opacity(0.15), radius: 15, y: 8)
             
-            content
+            Content(post: post, cornerRadius: cornerRadius)
                 .layoutPriority(150)
         }
         .padding(.horizontal, 16)
@@ -34,7 +30,50 @@ struct Card: View {
 }
 
 // MARK:- Content
-extension Card {
+struct Content: View {
+    let post: Post
+    let cornerRadius: CGFloat
+    
+    init(post: Post, cornerRadius: CGFloat = 0) {
+        self.post = post
+        self.cornerRadius = cornerRadius
+    }
+    
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State var shareSheetIsPresented = false
+    @State private var isBookmarked = false
+    @State private var bodyURL: URL? = nil
+    
+    var cardColor: Color {
+        colorScheme == .dark ? Color(hex: "1B1C1E") : Color.white
+    }
+    
+    var body: some View {
+        VStack {
+            VStack(alignment: .leading) {
+                header
+                Spacer().frame(height: 12)
+                title
+                Spacer().frame(height: 8)
+                contentBody
+                Spacer().frame(height: 12)
+                images
+                Spacer().frame(height: 12)
+                bottomRow
+            }.padding(.init(top: 10, leading: 5, bottom: 10, trailing: 5))
+            
+            
+        }
+        .sheet(item: $bodyURL) { url in
+            // FIXME: SVC displays oddly this way, with a few visual bugs requiring `edgesIgnoringSafeArea`
+            // I would rather have it slide in from the side, maybe in a NavigationLink?
+            SafariView(url: url).edgesIgnoringSafeArea(.all)
+        }
+    }
+}
+
+extension Content {
     @ViewBuilder
     var images: some View {
         if let image = post.media.first {
@@ -42,7 +81,8 @@ extension Card {
                 KFImage(image.source)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .rounded(corners: [.topLeft, .topRight], cornerRadius)
+                    .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+//                    .rounded(corners: [.topLeft, .topRight], cornerRadius)
                     .layoutPriority(100)
             }
         }
@@ -61,12 +101,16 @@ extension Card {
                     // FIXME: Make this a semantic computed property
                     .fontWeight(.medium)
                     .fontSize(15)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
                 
                 Text(post.username)
                     // FIXME: Make this a semantic computed property
                     .fontWeight(.light)
                     .fontSize(15)
                     .opacity(0.5)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
             }
             
             Spacer()
@@ -84,20 +128,26 @@ extension Card {
             Text(title)
                 .font(.title3)
                 .bold()
+                .lineLimit(2)
+                .truncationMode(.tail)
         }
     }
     
     @ViewBuilder
     var contentBody: some View {
-        if let body = post.body {
+        if let body = post.body, !body.isEmpty {
             if let url = post.bodyURL {
                 Button { bodyURL = url } label: {
                     Text(body)
                         .font(.body)
+                        .lineLimit(3)
+                        .truncationMode(.tail)
                 }
             } else {
                 Text(body)
                     .font(.body)
+                    .lineLimit(3)
+                    .truncationMode(.tail)
             }
         }
     }
@@ -139,25 +189,6 @@ extension Card {
             Spacer()
             
             buttons
-        }
-    }
-    
-    var content: some View {
-        VStack {
-            images
-            VStack(alignment: .leading) {
-                header
-                Spacer().frame(height: 12)
-                title
-                Spacer().frame(height: 8)
-                contentBody
-                Spacer().frame(height: 12)
-                bottomRow
-            }.padding(20)
-        }.sheet(item: $bodyURL) { url in
-            // FIXME: SVC displays oddly this way, with a few visual bugs requiring `edgesIgnoringSafeArea`
-            // I would rather have it slide in from the side, maybe in a NavigationLink?
-            SafariView(url: url).edgesIgnoringSafeArea(.all)
         }
     }
 }

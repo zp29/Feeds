@@ -14,46 +14,27 @@ struct CompactToday: View {
     }
     
     var body: some View {
-        Group {
-            if store.state.todayFeed.isEmpty {
-                ProgressView()
-            } else {
-                ScrollView {
-                    ZStack {
-                        Color.primary
-                            .colorInvert()
-                            .edgesIgnoringSafeArea(.all)
-                        
-                        VStack(alignment: .leading) {
-                            VStack(alignment: .leading) {
-                                Text(dateFormatter.string(from: Date()).uppercased())
-                                    // FIXME: Make this a semantic computed property
-                                    .fontWeight(.semibold)
-                                    .fontSize(13)
-                                    .opacity(0.45)
-                                
-                                Text("Today")
-                                    // FIXME: Make this a semantic computed property
-                                    .bold()
-                                    .fontSize(34)
-                            }.padding()
-                            
-                            ForEach(store.state.todayFeed) { post in
-                                Card(post: post)
-                            }
+        NavigationView {
+            Group {
+                if store.state.todayFeed.isEmpty {
+                    ProgressView()
+                } else {
+                    List { // ScrollView
+                        ForEach(store.state.todayFeed) { post in
+                            Content(post: post)
+                                .buttonStyle(PlainButtonStyle())
                         }
                     }
+                    .navigationTitle("Today")
+                    .pullToRefresh(isReloading: isLoading, action: fetch)
                 }
             }
         }
-        .navigationTitle("Today")
         .tabItem {
             Image(systemName: "newspaper.fill")
             Text("Today")
         }
         .onAppear(perform: fetch)
-        .pullToRefresh(isReloading: isLoading, action: fetch)
-        .visualEffectsStatusBarBackground()
     }
     
     func fetch() {

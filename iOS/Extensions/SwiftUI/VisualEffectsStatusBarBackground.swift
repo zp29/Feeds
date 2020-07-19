@@ -14,7 +14,7 @@ struct VisualEffectsStatusBarBackgroundModifier: ViewModifier {
         return 44
     }
     
-    func body(content: Content) -> some View {
+    func body(content: VisualEffectsStatusBarBackgroundModifier.Content) -> some View {
         Group {
             if !isPhone && !isPad {
                 content
