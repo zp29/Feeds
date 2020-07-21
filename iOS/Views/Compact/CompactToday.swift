@@ -15,20 +15,16 @@ struct CompactToday: View {
     
     var body: some View {
         NavigationView {
-            Group {
-                if store.state.todayFeed.isEmpty {
-                    ProgressView()
-                } else {
-                    List { // ScrollView
-                        ForEach(store.state.todayFeed) { post in
-                            Content(post: post)
-                                .buttonStyle(PlainButtonStyle())
-                        }
-                    }
-                    .navigationTitle("Today")
-                    .pullToRefresh(isReloading: isLoading, action: fetch)
+            List {
+                ForEach(store.state.todayFeed) { post in
+                    Content(post: post)
+                        .buttonStyle(PlainButtonStyle())
                 }
             }
+            .navigationTitle("Today")
+            .pullToRefresh(isReloading: isLoading, action: fetch)
+            // 🤞🏼 beta 3
+            // .isPlaceholder(store.state.todayFeed.isEmpty)
         }
         .tabItem {
             Image(systemName: "newspaper.fill")
