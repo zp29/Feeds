@@ -1,30 +1,43 @@
 import SwiftUI
 
 struct CompactToday: View {
+    private let title = "Today"
+    
     @EnvironmentObject var store: AppStore
     var isLoading: Binding<Bool> { store.binding(for: \.isLoading) { .setIsLoading($0) } }
     
-    private var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.timeStyle = .none
-        formatter.dateStyle = .full
-        formatter.locale = Locale(identifier: "en_US")
-        formatter.doesRelativeDateFormatting = false
-        return formatter
+    func post(data: Post) -> some View {
+        Content(post: data).buttonStyle(PlainButtonStyle())
+    }
+        
+    var content: some View {
+        List {
+            ForEach(store.state.todayFeed) { todayPost in
+                post(data: todayPost)
+            }
+        }
+        .navigationTitle(title)
+        .pullToRefresh(isReloading: isLoading, action: fetch)
+    }
+    
+    var placeholder: some View {
+        List {
+            ForEach(1..<20) { _ in
+                // TODO: Randomize which ones have media
+                post(data: Post.placeholder)
+            }
+        }
+        .navigationTitle(title)
+        .redacted(reason: .placeholder)
     }
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(store.state.todayFeed) { post in
-                    Content(post: post)
-                        .buttonStyle(PlainButtonStyle())
-                }
+            if store.state.isLoading {
+                placeholder
+            } else {
+                content
             }
-            .navigationTitle("Today")
-            .pullToRefresh(isReloading: isLoading, action: fetch)
-            // 🤞🏼 beta 3
-            // .isPlaceholder(store.state.todayFeed.isEmpty)
         }
         .tabItem {
             Image(systemName: "newspaper.fill")

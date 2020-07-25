@@ -265,8 +265,6 @@
 			isa = PBXGroup;
 			children = (
 				D13FD49D24C37FBB001E8BFB /* Card.swift */,
-				D14D51A224C393940001808B /* RoundedCorners.swift */,
-				D117B32124C3ABA4006FF257 /* FontSize.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +272,7 @@
 		D13FD4A924C37FF5001E8BFB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D117B32124C3ABA4006FF257 /* FontSize.swift */,
 				D13FD48324C37F9B001E8BFB /* Color+hex.swift */,
 			);
 			path = SwiftUI;
@@ -299,6 +298,7 @@
 		D13FD4B424C381F4001E8BFB /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				D14D51A224C393940001808B /* RoundedCorners.swift */,
 				D13FD4B824C381F4001E8BFB /* PullToRefresh.swift */,
 				D13FD4B724C381F4001E8BFB /* VisualEffectsStatusBarBackground.swift */,
 				D13FD4B624C381F4001E8BFB /* Environment+DeviceType.swift */,

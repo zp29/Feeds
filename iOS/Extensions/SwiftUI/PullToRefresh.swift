@@ -24,8 +24,7 @@ public struct PullToRefresh: UIViewRepresentable {
             self.isReloading = isReloading
         }
         
-        @objc
-        func onValueChanged() {
+        @objc func onValueChanged() {
             isReloading.wrappedValue = true
             action()
         }
@@ -48,7 +47,7 @@ public struct PullToRefresh: UIViewRepresentable {
     }
 
     public func updateUIView(_ uiView: UIView, context: Context) {
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
+        DispatchQueue.main.async {
             guard let viewHost = uiView.superview?.superview else {
                 return
             }
